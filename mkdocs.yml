@@ -1,0 +1,148 @@
+site_name: Big Data & Cloud Engineering Guide
+site_description: "A production-grade reference for Big Data, Apache Spark, Azure, AWS, and Cloud Data Engineering."
+site_url: https://jsrivastava11.github.io/bigdata-doc
+
+nav:
+  - Home: index.md
+  - Big Data Fundamentals:
+    - Overview: 01-big-data-fundamentals/index.md
+    - Hadoop Ecosystem: 01-big-data-fundamentals/hadoop.md
+    - MapReduce: 01-big-data-fundamentals/mapreduce.md
+  - Apache Spark Core:
+    - Overview: 02-apache-spark-core/index.md
+    - RDDs: 02-apache-spark-core/rdds.md
+    - DataFrames & SparkSQL: 02-apache-spark-core/dataframes.md
+    - Transformations & Functions: 02-apache-spark-core/transformations.md
+  - Spark Performance:
+    - Overview: 03-spark-performance/index.md
+    - Caching & Persistence: 03-spark-performance/caching.md
+    - Partitioning & Bucketing: 03-spark-performance/partitioning.md
+    - Query Optimization (AQE & Joins): 03-spark-performance/optimization.md
+    - Memory Management & File Formats: 03-spark-performance/memory-formats.md
+  - Production Engineering:
+    - Overview: 04-production-engineering/index.md
+    - Resource Sizing: 04-production-engineering/resource-sizing.md
+    - Testing, Logging & Debugging: 04-production-engineering/testing-logging.md
+    - Git, CI/CD & DevOps: 04-production-engineering/cicd.md
+    - Apache Hive: 04-production-engineering/hive.md
+  - Delta Lake:
+    - Overview: 05-delta-lake/index.md
+    - Delta Lake Core: 05-delta-lake/delta-core.md
+    - Medallion Architecture: 05-delta-lake/medallion.md
+    - Change Data Feed: 05-delta-lake/cdf.md
+    - Optimization & Maintenance: 05-delta-lake/optimization.md
+  - Azure Cloud & Databricks:
+    - Overview: 06-azure-cloud/index.md
+    - Azure Infrastructure: 06-azure-cloud/azure-infra.md
+    - Azure Storage (ADLS Gen2): 06-azure-cloud/azure-storage.md
+    - Azure Databricks Architecture: 06-azure-cloud/azure-databricks.md
+    - Unity Catalog & Governance: 06-azure-cloud/unity-catalog.md
+  - Pipeline Orchestration:
+    - Overview: 07-pipeline-orchestration/index.md
+    - Azure Data Factory: 07-pipeline-orchestration/adf.md
+    - Azure Synapse Analytics: 07-pipeline-orchestration/synapse.md
+    - End-to-End Pipeline Design: 07-pipeline-orchestration/e2e-pipeline.md
+  - Data Modeling:
+    - Overview: 08-data-modeling/index.md
+    - Normalization (1NF–3NF): 08-data-modeling/normalization.md
+    - Dimensional Modeling: 08-data-modeling/dimensional.md
+    - Slowly Changing Dimensions: 08-data-modeling/scd.md
+  - Streaming & Messaging:
+    - Overview: 09-streaming-messaging/index.md
+    - Spark Structured Streaming: 09-streaming-messaging/structured-streaming.md
+    - Apache Kafka: 09-streaming-messaging/kafka.md
+    - Kafka + Spark Patterns: 09-streaming-messaging/kafka-spark.md
+  - AWS Big Data:
+    - Overview: 10-aws-big-data/index.md
+    - Amazon EMR: 10-aws-big-data/emr.md
+    - AWS Glue: 10-aws-big-data/glue.md
+    - Amazon S3 & Lambda: 10-aws-big-data/s3-lambda.md
+    - Amazon Redshift: 10-aws-big-data/redshift.md
+  - Interview Preparation:
+    - Overview: 11-interview-prep/index.md
+    - System Design Questions: 11-interview-prep/system-design.md
+    - Technical Q&A Bank: 11-interview-prep/qa-bank.md
+    - Data Structures & Algorithms: 11-interview-prep/dsa.md
+  - Glossary: glossary.md
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep-purple
+      accent: deep-purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.footer
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - meta
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mermaid2:
+      arguments:
+        theme: base
+        themeVariables:
+          primaryColor: "#1a1a3a"
+          primaryTextColor: "#e6edf3"
+          primaryBorderColor: "#7c3aed"
+          lineColor: "#7c3aed"
+          secondaryColor: "#0d1117"
+          tertiaryColor: "#1a1a2e"
+          background: "#0d1117"
+          mainBkg: "#1a1a3a"
+          nodeBorder: "#7c3aed"
+          clusterBkg: "#0f0f23"
+          titleColor: "#ffffff"
+          edgeLabelBackground: "#1a1a3a"
+          fontFamily: "Roboto Mono, Consolas, monospace"
+
+extra_css:
+  - stylesheets/theme.css
+
+extra:
+  generator: false

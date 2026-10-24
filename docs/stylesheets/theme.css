@@ -1,0 +1,68 @@
+/* ===== Big Data Guide — Custom Theme ===== */
+
+:root {
+  --bd-purple: #7c3aed;
+  --bd-purple-light: #a78bfa;
+  --bd-purple-dark: #4c1d95;
+  --bd-bg-dark: #0d1117;
+  --bd-bg-card: #1a1a3a;
+  --bd-border: #7c3aed;
+}
+
+/* Navigation highlight */
+.md-nav__item--active > .md-nav__link {
+  color: var(--bd-purple-light);
+  font-weight: 600;
+}
+
+/* Code block styling */
+.md-typeset code {
+  background-color: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 3px;
+}
+
+/* Admonition overrides */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--bd-purple);
+}
+
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset details.tip > summary {
+  background-color: rgba(124, 58, 237, 0.1);
+}
+
+/* Table styling */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(124, 58, 237, 0.15);
+  border-bottom: 2px solid var(--bd-purple);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: rgba(124, 58, 237, 0.04);
+}
+
+/* Mermaid diagram container */
+.mermaid {
+  margin: 1.5rem 0;
+}
+
+/* Tabs styling */
+.md-typeset .tabbed-labels > label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Header tag */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d1117;
+  --md-code-bg-color: #161b22;
+}
